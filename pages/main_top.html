@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- mainTop start -->
+    <section
+        class="bg-cover bg-no-repeat bg-[center] bg-[url(https://www.bing.co.kr/img/main/mo_section01_4.jpg)] pt-[130px] pb-[60px] flex flex-col items-center md:bg-[url(https://www.bing.co.kr/img/main/pc_section01_4.jpg)] md:py-[180px]">
+
+        <!-- mainBanner -->
+        <div class="md:inline-block">
+            <img src="https://www.bing.co.kr/img/main/sec01_logo_4.png" alt="binggrae_pc"
+                class="hidden lg:block w-[95%] mx-auto">
+            <img src="https://www.bing.co.kr/img/main/m_sec01_logo_4.png" alt="binggrae_mo"
+                class="block lg:hidden w-[95%] mx-auto">
+        </div>
+
+        <!-- searchBox -->
+        <div
+            class="flex justify-center w-[90%] max-w-[500px] h-[45px] mt-[20px] rounded-full bg-[white] shadow-[0_5px_25px_3px_#00000018] md:w-[80%] md:max-w-[1020px] md:h-[60px] md:mt-[40px] xl:h-[80px]">
+            <div class="flex pl-[25px] pr-[6px] w-full items-center md:pl-[55px] md:pr-[15px]">
+                <input type="text" placeholder="검색어를 입력해주세요" onfocus="this.placeholder=''"
+                    onblur="this.placeholder='검색어를 입력해주세요'"
+                    class="flex-grow h-full pl-[27px] text-[12px] text-left bg-[url(https://www.bing.co.kr/img/main/search_icon.png)] bg-no-repeat bg-left bg-[length:12px] outline-none tracking-[-1px] md:bg-[length:auto] md:text-[17px]">
+                <button
+                    class="flex justify-center items-center w-[30%] max-w-[180px] rounded-full h-[30px] font-bold text-[10px] bg-gradient-to-t from-[#ed1c24] to-[#e0462e] text-[white] md:w-[22%] md:h-[45px] md:text-[14px] xl:h-[55px]">SEARCH</button>
+            </div>
+        </div>
+
+        <!-- keyword hashTag -->
+        <ul class="flex justify-center mt-[25px] gap-x-[6px]">
+            <li
+                class="flex items-center justify-center h-[30px] px-[10px] text-[10px] text-[#1f1f1f] border border-[#edecef] rounded-full cursor-pointer whitespace-nowrap md:text-[12px] md:px-[20px] md:min-w-[120px] md:h-[38px] font-[binggrae]">
+                #바나나맛우유</li>
+            <li
+                class="flex items-center justify-center h-[30px] px-[10px] text-[10px] text-[#1f1f1f] border border-[#edecef] rounded-full cursor-pointer whitespace-nowrap md:text-[12px] md:px-[20px] md:min-w-[120px] font-[binggrae]">
+                #더단백</li>
+            <li
+                class="flex items-center justify-center h-[30px] px-[10px] text-[10px] text-[#1f1f1f] border border-[#edecef] rounded-full cursor-pointer whitespace-nowrap md:text-[12px] md:px-[20px] md:min-w-[120px] font-[binggrae]">
+                #슈퍼콘</li>
+            <li
+                class="flex items-center justify-center h-[30px] px-[10px] text-[10px] text-[#1f1f1f] border border-[#edecef] rounded-full cursor-pointer whitespace-nowrap md:text-[12px] md:px-[20px] md:min-w-[120px] font-[binggrae]">
+                #요플레</li>
+        </ul>
+    </section>
+
+
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>
