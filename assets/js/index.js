@@ -1,6 +1,20 @@
 let depth02_height = [];
 let headerHeigth = $('.header').height();
 
+// 헤더 상단 고정
+function headerFixed() {
+    $(window).on("scroll", function(){
+        let scrollTop = $(this).scrollTop();
+        
+        if(scrollTop > 0) {
+            $('.header').addClass('fixed');
+        }
+        else {
+            $('.header').removeClass('fixed');
+        }
+    });
+}
+
 // 헤더 호버 시
 function headerHover() {
 
@@ -64,6 +78,8 @@ function headerFullMenuBtn() {
     });
 }
 
+
 headerHover();
 headerLangsBtn();
 headerFullMenuBtn();
+headerFixed();

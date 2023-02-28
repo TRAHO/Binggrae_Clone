@@ -323,6 +323,13 @@ body.fixed {
     transition: all 1s 0.4s;
 }
 
+/* 스크롤 시 헤더 영역 */
+.header.fixed {
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+}
 
-
-/* 임시 */
+.header.fixed .header__main {
+    border-bottom: 1px solid #e7e7e7;
+}
