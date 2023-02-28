@@ -91,11 +91,59 @@
     height: 2px;
 }
 
+/* 헤더 버튼 영역 */
+.header__btnWrap {
+    display: flex;
+    align-items: center;
+    gap:0 33px;
+}
+
+/* 언어 버튼 */
+.header__lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__lang-btn > span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header__lang-btn > img {
+    transition: transform 0.8s cubic-bezier(.21,.7,.36,.8);
+}
+
+.header__langsWrap {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 130%;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 3px 7px 0 rgb(0 0 0 / 5%); 
+}
+
+.header__langsWrap > li > a {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.5px;
+}
+
+/* 언어 버튼 클릭 시 */
+.header__lang-btn.active > img {
+    transform: rotate(540deg);
+}
+
 
 
 /* 임시 */
 .header__navWrap ul ul,
-.header__fullMenu,
-.header__langsWrap {
+.header__fullMenu{
     display: none;
 }
