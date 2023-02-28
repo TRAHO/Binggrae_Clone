@@ -1,7 +1,8 @@
+let depth02_height = [];
+let headerHeigth = $('.header').height();
+
 // 헤더 호버 시
 function headerHover() {
-    let depth02_height = [];
-    let headerHeigth = $('.header').height();
 
     $('.header__navWrap .depth-2').each(function(index){
         depth02_height[index] = $(this).innerHeight();
@@ -56,6 +57,8 @@ function headerFullMenuBtn() {
             $(this).addClass('active');
             $('html, body').addClass('fixed');
             $('.header__navWrap').hide();
+            $('.header').removeClass('active');
+            $('.header').height(headerHeigth);
             $('.header__fullMenu').addClass('active');
         }
     });
