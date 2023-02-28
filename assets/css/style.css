@@ -1,10 +1,26 @@
+/* 스크롤 숨김 */
+html.fixed,
+body.fixed {
+    position: fixed;
+    width: 100%;
+}
+
 /* 헤더 영역 */
 .header {
     display: flex;
     flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 /* 헤더 상단 영역 */
+.header__top {
+    position: relative;
+    z-index: 1;
+}
+
 .header__top > ul {
     display: flex;
     justify-content: flex-end;
@@ -39,6 +55,7 @@
     align-items: center;
     padding: 40px 80px;
     position: relative;
+    z-index: 1;
 }
 
 /* 헤더 메뉴 영역 */
@@ -140,10 +157,139 @@
     transform: rotate(540deg);
 }
 
+/* 전체 메뉴 버튼 */
+.header__fullMenu-btn {
+    display: flex;
+    width: 26px;
+    position: relative;
+    padding: 15px 0;
+    cursor: pointer;
+}
+
+.header__fullMenu-btn > span {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    transition: all 0.8s;
+}
+
+.header__fullMenu-btn > span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header__fullMenu-btn > span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+/* 전체 메뉴 버튼 클릭 시 */
+.header__fullMenu-btn.active > span:nth-child(1) {
+    transform: rotate(135deg);
+}
+
+.header__fullMenu-btn.active > span:nth-child(2) {
+    transform: rotate3d(0, 1, 0, 180deg);
+    opacity: 0;
+}
+
+.header__fullMenu-btn.active > span:nth-child(3) {
+    transform: rotate(-135deg);
+}
+
+/* 전체 메뉴 영역 */
+.header__fullMenu {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/pc_ham_bg.png);
+    background-repeat: no-repeat;
+    background-position: right top -80px;
+    background-color: #fff;
+    transition: all 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header__fullMenu ul:not(.depth-3) > li > a {
+    display: block;
+}
+
+.header__fullMenu .depth-1 {
+    display: flex;
+    gap: 0 10px;
+}
+
+.header__fullMenu .depth-1 > li {
+    width: 255px;
+    padding: 50px 30px;
+    background-color: #fff;
+    border: 1px solid rgba(224, 223, 226, 0.6);
+    border-radius: 30px;
+    transition: all 0.6s;
+}
+
+.header__fullMenu .depth-1 > li > a {
+    padding-bottom: 40px;
+    font-size: 32px;
+    font-family: Binggrae-bold;
+}
+
+.header__fullMenu .depth-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+}
+
+.header__fullMenu .depth-2 > li > a {
+    display: block;
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+}
+
+.header__fullMenu .depth-3 {
+    padding-top: 15px;
+}
+
+.header__fullMenu .depth-3 > li > a {
+    font-size: 15px;
+    color: #343434cc;
+}
+
+.header__fullMenu .depth-3 > li:nth-child(2) > a {
+    letter-spacing: normal;
+}
+
+.header__fullMenu ul:not(.depth-3) > li:hover > a {
+    color: #e0462e;
+}
+
+.header__fullMenu .depth-1 > li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 24.3px 2.7px rgb(0 0 0 / 9%);
+}
+
+.header__fullMenu .depth-2 > li:hover {
+    background-image: url(../img/pc_ham_hover_img.png);
+    background-repeat: no-repeat;
+    background-position: right top 2px;
+}
+
+/* 전체 메뉴 활성화 시 */
+.header__fullMenu.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
 
 
 /* 임시 */
-.header__navWrap ul ul,
-.header__fullMenu{
+.header__navWrap ul ul{
     display: none;
 }
