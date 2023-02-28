@@ -1,3 +1,23 @@
+// 헤더 호버 시
+function headerHover() {
+    let depth02_height = [];
+    let headerHeigth = $('.header').height();
+
+    $('.header__navWrap .depth-2').each(function(index){
+        depth02_height[index] = $(this).innerHeight();
+    });
+
+    $('.header__navWrap').mouseenter(function(){
+        $('.header').addClass('active');
+        $('.header').height(headerHeigth + Math.max(...depth02_height));
+    });
+
+    $('.header').mouseleave(function(){
+        $('.header').removeClass('active');
+        $('.header').height(headerHeigth);
+    });
+}
+
 // 헤더 언어 버튼
 function headerLangsBtn() {
     $('.header__lang-btn').click(function(){
@@ -41,5 +61,6 @@ function headerFullMenuBtn() {
     });
 }
 
+headerHover();
 headerLangsBtn();
 headerFullMenuBtn();

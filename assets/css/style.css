@@ -78,6 +78,7 @@ body.fixed {
 .header__navWrap .depth-1 > li {
     display: flex;
     padding-top: 45px;
+    position: relative;
 }
 
 .header__navWrap .depth-1 > li > a {
@@ -106,6 +107,23 @@ body.fixed {
     left: 0;
     width: 100%;
     height: 2px;
+}
+
+.header__navWrap .depth-2 {
+    position: absolute;
+    top: 100%;
+    padding-top: 20px;
+    visibility: visible;
+    opacity: 0;
+}
+
+.header__navWrap .depth-2 > li > a {
+    display: block;
+    padding: 7px 0;
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
 }
 
 /* 헤더 버튼 영역 */
@@ -285,11 +303,26 @@ body.fixed {
     opacity: 1;
 }
 
+/* 헤더 호버 시 */
+.header.active {
+    background-color: #fff;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0 2px 9.8px 0.2px rgb(0 0 0 / 8%);
+    transition: height 0.8s;
+    padding-bottom: 30px;
+}
 
+.header.active .header__main {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.header.active .header__navWrap .depth-2 {
+    visibility: visible;
+    opacity: 1;
+    transition: all 1s 0.4s;
+}
 
 
 
 /* 임시 */
-.header__navWrap ul ul{
-    display: none;
-}
