@@ -1,0 +1,33 @@
+/* 헤더 영역 */
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 헤더 상단 영역 */
+.header__top > ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0 20px;
+    padding: 0 80px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.header__top > ul > li > a {
+    display: flex;
+    align-items: center;
+    gap: 0 5px;
+}
+
+.header__top > ul > li+li > a {
+    position: relative;
+}
+
+.header__top > ul > li+li > a::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    width: 1px;
+    height: 8px;
+    background-color: #0000001a;
+}
