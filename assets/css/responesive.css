@@ -59,3 +59,11 @@
         padding: 30px 15px;
     }
 }
+
+/* width 1024px 이하  */
+@media screen and (max-width: 1024px) {
+    /* 헤더 상단 영역 */
+    .header__top {
+        display: none;
+    }
+}
