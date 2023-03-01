@@ -30,7 +30,7 @@
     }
 
     /* 전체 메뉴 영역 */
-    .header__fullMenu .depth-1 {
+    .fullMenu__Container {
         max-width: 95%;
     }
 
@@ -62,8 +62,85 @@
 
 /* width 1024px 이하  */
 @media screen and (max-width: 1024px) {
+    .pc {
+        display: none;
+    }
+
+    .mo {
+        display: block;
+    }
+
     /* 헤더 상단 영역 */
     .header__top {
         display: none;
+    }
+
+    /* 헤더 로고 영역 */
+    .header__logoWrap {
+        width: 117px;
+    }
+
+    /* 헤더 1차 메뉴 영역 */
+    .header__navWrap {
+        display: none;
+    }
+
+    /* 전체 메뉴 영역 */
+    .header__fullMenu {
+        z-index: 2;
+        background-image: url();
+        background-color: #0000001a;
+        opacity: 0.1;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-top: 0;
+    }
+    
+    .fullMenu__Container {
+        background-color: #fff;
+        border-top-left-radius: 30px;
+        width: 500px;
+        height: 100%;
+    }
+
+    /* 전체 메뉴 상단 영역 */
+    .fullMenu__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        border-bottom: 1px solid #0000001a
+    }
+    
+    .fullMenu__top ul {
+        display: flex;
+        gap: 0 6px;
+    }
+
+    .fullMenu__top > ul > li > a {
+        display: flex;
+        align-items: center;
+        gap: 0 4px;
+        padding: 10px 14px;
+        border-radius: 17px;
+        border: 1px solid rgb(0 0 0 / 0.1);
+    }
+
+    .fullMenu__top > ul > li > a > span {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    /* 전체 메뉴 닫기 버튼 */
+    .fullMenu__close-btn {
+        width: 22px;
+        cursor: pointer;
+    }
+
+    /* 전체 메뉴 depth 영역 */
+    .header__fullMenu .depth-1 {
+        flex-direction: column;
+        padding-top: 14px;
     }
 }

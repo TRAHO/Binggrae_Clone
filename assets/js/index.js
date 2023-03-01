@@ -3,7 +3,7 @@ let headerHeigth = $('.header').height();
 
 // 헤더 상단 고정
 function headerFixed() {
-    $(window).on("scroll", function(){
+    $(document).on("scroll", function(){
         let scrollTop = $(this).scrollTop();
         
         if(scrollTop > 0) {
@@ -75,6 +75,12 @@ function headerFullMenuBtn() {
             $('.header').height(headerHeigth);
             $('.header__fullMenu').addClass('active');
         }
+    });
+
+    $('.fullMenu__close-btn').click(function(){
+        $('.header__fullMenu-btn').removeClass('active');
+        $('.header__fullMenu').removeClass('active');
+        $('html, body').removeClass('fixed');
     });
 }
 

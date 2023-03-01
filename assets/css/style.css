@@ -85,6 +85,7 @@ body.fixed {
     padding-bottom: 40px;
     font-size: 20px;
     position: relative;
+    white-space: nowrap;
 }
 
 .header__navWrap .depth-1 > li:hover > a::before,
@@ -227,17 +228,19 @@ body.fixed {
     background-repeat: no-repeat;
     background-position: right top -80px;
     background-color: #fff;
-    transition: all 0.3s;
+    transition: all 1s;
     visibility: hidden;
     opacity: 0;
 }
 
-.header__fullMenu ul:not(.depth-3) > li > a {
+.header__fullMenu .depth-1 > li > a,
+.header__fullMenu .depth-2 > li > a {
     display: block;
 }
 
 .header__fullMenu .depth-1 {
     display: flex;
+    margin: 0 auto;
     gap: 0 10px;
 }
 
@@ -282,7 +285,8 @@ body.fixed {
     letter-spacing: normal;
 }
 
-.header__fullMenu ul:not(.depth-3) > li:hover > a {
+.header__fullMenu .depth-1 > li:hover > a,
+.header__fullMenu .depth-2 > li:hover > a {
     color: #e0462e;
 }
 
