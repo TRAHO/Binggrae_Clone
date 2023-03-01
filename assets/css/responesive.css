@@ -1,0 +1,61 @@
+/* height 680px 이하 */
+@media screen and (max-height: 680px) {
+    .header__fullMenu {
+        padding-top: 150px;
+        align-items: flex-start;
+    }
+}
+
+/* width 1700px 이하 */
+@media screen and (max-width: 1700px) {
+    .header__top {
+        padding: 0 20px;
+    }
+    
+    .header__main {
+        padding: 40px 20px;
+    }
+
+    /* 헤더 1차 메뉴 영역 */
+    .header__navWrap .depth-1 {
+        gap: 0 50px;
+    }
+
+    .header__navWrap .depth-1 > li > a {
+        font-size: 16px;
+    }
+
+    .header__navWrap .depth-2 > li > a {
+        font-size: 14px;
+    }
+
+    /* 전체 메뉴 영역 */
+    .header__fullMenu .depth-1 {
+        max-width: 95%;
+    }
+
+    .header__fullMenu .depth-1 > li > a {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header__fullMenu .depth-2 > li > a {
+        font-size: 14px;
+    }
+
+    .header__fullMenu .depth-3 {
+        padding-top: 5px;
+    }
+
+    .header__fullMenu .depth-3 > li > a {
+        font-size: 12px;
+    }
+}
+
+/* width 1280px 이하 */
+@media screen and (max-width: 1280px) {
+    /* 전체 메뉴 영역 */
+    .header__fullMenu .depth-1 > li {
+        padding: 30px 15px;
+    }
+}
