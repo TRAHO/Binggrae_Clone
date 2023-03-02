@@ -234,6 +234,10 @@ body.fixed {
     opacity: 0;
 }
 
+.fullMenu__top {
+    display: none;
+}
+
 .header__fullMenu .depth-1 > li > a,
 .header__fullMenu .depth-2 > li > a {
     display: block;
@@ -292,6 +296,10 @@ body.fixed {
 .header__fullMenu .depth-1 > li:hover > a,
 .header__fullMenu .depth-2 > li:hover > a {
     color: #e0462e;
+}
+
+.header__bottom {
+    display: none;
 }
 
 /* 전체 메뉴 활성화 시 */
