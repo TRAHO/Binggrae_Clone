@@ -2,6 +2,20 @@ let depth02_height = [];
 let headerHeigth = $('.header').height();
 let currentWidth = $(window).width();
 
+ // 현재 width 값 변화 시 currentWidth에 저장
+$(window).resize(function(){
+    currentWidth = $(this).width();
+
+    // width 1024이하 fullMenu depth-2 초기화
+    if(currentWidth > 1024) {
+        $('.header__fullMenu .depth-1 > li').find('.depth-2').css('display', 'flex');
+        $('.header__fullMenu .depth-1 > li').removeClass('active');
+    }
+    else {
+        $('.header__fullMenu .depth-1 > li').find('.depth-2').hide();
+    }
+});
+
 // 헤더 상단 고정
 function headerFixed() {
     $(window).on("scroll", function(){
@@ -85,11 +99,6 @@ function headerFullMenuBtn() {
         $('.header__fullMenu .depth-1 > li.active').removeClass('active');
     });
 
-     // 현재 width 값 변화 시 currentWidth에 저장
-    $(window).resize(function(){
-        currentWidth = $(this).width(); 
-    });
-
     $('.header__fullMenu').click(function(){
         if(currentWidth <= 1024) {
             $('.header__fullMenu-btn').removeClass('active');
@@ -100,25 +109,32 @@ function headerFullMenuBtn() {
         }
     });
     
-    
+    $('.fullMenu__Container').click(function(){
+        return false;
+    });
 }
 
 // width 1024이하 전체메뉴 아이템
 function mobileFullMenuItem() {
     $('.header__fullMenu .depth-1 > li').click(function(){
-        $(this).siblings('.active').find('.depth-2').stop().slideUp(500);
-        $(this).siblings('.active').removeClass('active');
-        if($(this).hasClass('active')) {
-            $(this).removeClass('active');
-            $(this).find('.depth-2').stop().slideUp(500);
-        }
-        else {
-            $(this).addClass('active');
-            $(this).find('.depth-2').stop().slideDown(500);
+        if(currentWidth <= 1024) {
+            $(this).siblings('.active').find('.depth-2').stop().slideUp(500);
+            $(this).siblings('.active').removeClass('active');
+            if($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(this).find('.depth-2').stop().slideUp(500);
+            }
+            else {
+                $(this).addClass('active');
+                $(this).find('.depth-2').stop().slideDown(500);
+            }
         }
     });
-}
 
+    $('.header__fullMenu .depth-2').click(function(){
+        return false;
+    });
+}
 
 headerHover();
 headerLangsBtn();
