@@ -6,13 +6,10 @@ let currentWidth = $(window).width();
 $(window).resize(function(){
     currentWidth = $(this).width();
 
-    // width 1024이하 fullMenu depth-2 초기화
-    if(currentWidth > 1024) {
-        $('.header__fullMenu .depth-1 > li').find('.depth-2').css('display', 'flex');
+    // width 1024이상 fullMenu depth-2 초기화
+    if($('.header__fullMenu .depth-1 > li').hasClass('active') && currentWidth > 1024) {
+        $('.header__fullMenu .depth-1 > li').find('.depth-2').css('display', '');
         $('.header__fullMenu .depth-1 > li').removeClass('active');
-    }
-    else {
-        $('.header__fullMenu .depth-1 > li').find('.depth-2').hide();
     }
 });
 
@@ -95,7 +92,9 @@ function headerFullMenuBtn() {
         $('.header__fullMenu-btn').removeClass('active');
         $('.header__fullMenu').removeClass('active');
         $('html, body').removeClass('fixed');
-        $('.header__fullMenu .depth-1 > li.active').find('.depth-2').stop().slideUp();
+        $('.header__fullMenu .depth-1 > li.active').find('.depth-2').stop().slideUp(function(){
+            $(this).css('display', '');
+        });
         $('.header__fullMenu .depth-1 > li.active').removeClass('active');
         $('.header__navWrap').css('display', '');
     });
@@ -105,7 +104,9 @@ function headerFullMenuBtn() {
             $('.header__fullMenu-btn').removeClass('active');
             $('.header__fullMenu').removeClass('active');
             $('html, body').removeClass('fixed');
-            $('.header__fullMenu .depth-1 > li.active').find('.depth-2').stop().slideUp();
+            $('.header__fullMenu .depth-1 > li.active').find('.depth-2').stop().slideUp(function(){
+                $(this).css('display', '');
+            });
             $('.header__fullMenu .depth-1 > li.active').removeClass('active');
             $('.header__navWrap').css('display', '');
         }
@@ -120,11 +121,15 @@ function headerFullMenuBtn() {
 function mobileFullMenuItem() {
     $('.header__fullMenu .depth-1 > li').click(function(){
         if(currentWidth <= 1024) {
-            $(this).siblings('.active').find('.depth-2').stop().slideUp(500);
+            $(this).siblings('.active').find('.depth-2').stop().slideUp(500, function(){
+                $(this).css('display', '');
+            });
             $(this).siblings('.active').removeClass('active');
             if($(this).hasClass('active')) {
                 $(this).removeClass('active');
-                $(this).find('.depth-2').stop().slideUp(500);
+                $(this).find('.depth-2').stop().slideUp(500, function(){
+                    $(this).css('display', '');
+                });
             }
             else {
                 $(this).addClass('active');
