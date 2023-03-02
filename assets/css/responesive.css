@@ -137,9 +137,38 @@
         cursor: pointer;
     }
 
-    /* 전체 메뉴 depth 영역 */
+    /* 전체 메뉴 1차메뉴 영역 */
     .header__fullMenu .depth-1 {
         flex-direction: column;
-        padding-top: 14px;
+        padding-top: 11px;
+        padding-bottom: 30px;
+    }
+
+    .header__fullMenu .depth-1 > li {
+        width: 100%;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+    }
+
+    .header__fullMenu .depth-1 > li > a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 20px 11px 38px;
+    }
+
+    .header__fullMenu .depth-1 > li > a > span {
+        font-size: 21px;
+        line-height: 1;
+    }
+    
+    .header__fullMenu .depth-1 > li > a > img {
+        width: 9px;
+    }
+
+    /* 전체 메뉴 2차메뉴 영역 */
+    .header__fullMenu .depth-2 {
+        display: none;
     }
 }

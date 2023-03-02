@@ -256,6 +256,9 @@ body.fixed {
 
 .header__fullMenu .depth-1 > li > a {
     padding-bottom: 40px;
+}
+
+.header__fullMenu .depth-1 > li > a > span {
     font-size: 32px;
     font-family: Binggrae-bold;
 }
