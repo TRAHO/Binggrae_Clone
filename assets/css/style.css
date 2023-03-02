@@ -294,17 +294,6 @@ body.fixed {
     color: #e0462e;
 }
 
-.header__fullMenu .depth-1 > li:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 5px 24.3px 2.7px rgb(0 0 0 / 9%);
-}
-
-.header__fullMenu .depth-2 > li:hover {
-    background-image: url(../img/pc_ham_hover_img.png);
-    background-repeat: no-repeat;
-    background-position: right top 2px;
-}
-
 /* 전체 메뉴 활성화 시 */
 .header__fullMenu.active {
     visibility: visible;

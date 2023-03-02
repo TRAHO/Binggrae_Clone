@@ -81,6 +81,24 @@ function headerFullMenuBtn() {
         $('.header__fullMenu-btn').removeClass('active');
         $('.header__fullMenu').removeClass('active');
         $('html, body').removeClass('fixed');
+        $('.header__fullMenu .depth-1 > li.active').find('.depth-2').stop().slideUp();
+        $('.header__fullMenu .depth-1 > li.active').removeClass('active');
+    });
+}
+
+// width 1024이하 전체메뉴 아이템
+function mobileFullMenuItem() {
+    $('.header__fullMenu .depth-1 > li').click(function(){
+        $(this).siblings('.active').find('.depth-2').stop().slideUp(500);
+        $(this).siblings('.active').removeClass('active');
+        if($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            $(this).find('.depth-2').stop().slideUp(500);
+        }
+        else {
+            $(this).addClass('active');
+            $(this).find('.depth-2').stop().slideDown(500);
+        }
     });
 }
 
@@ -89,3 +107,4 @@ headerHover();
 headerLangsBtn();
 headerFullMenuBtn();
 headerFixed();
+mobileFullMenuItem();
