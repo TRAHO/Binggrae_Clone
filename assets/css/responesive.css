@@ -263,11 +263,11 @@
         color: #1f1f1f;
     }
 
-    .fullMenu__bottom > ul > li+li > a {
+    .fullMenu__bottom > ul > li+li {
         position: relative;
     }
 
-    .fullMenu__bottom > ul > li+li > a::before {
+    .fullMenu__bottom > ul > li+li::before {
         content: "";
         position: absolute;
         left: -10px;

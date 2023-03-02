@@ -1,9 +1,10 @@
 let depth02_height = [];
 let headerHeigth = $('.header').height();
+let currentWidth = $(window).width();
 
 // 헤더 상단 고정
 function headerFixed() {
-    $(document).on("scroll", function(){
+    $(window).on("scroll", function(){
         let scrollTop = $(this).scrollTop();
         
         if(scrollTop > 0) {
@@ -17,7 +18,6 @@ function headerFixed() {
 
 // 헤더 호버 시
 function headerHover() {
-
     $('.header__navWrap .depth-2').each(function(index){
         depth02_height[index] = $(this).innerHeight();
     });
@@ -48,7 +48,7 @@ function headerLangsBtn() {
     });
 
     // 영역 외 클릭 시
-    $(document).click(function(e){
+    $(window).click(function(e){
         let virtualClass = $('.virtualClass');
 
         if(!virtualClass.has(e.target).length) {
@@ -84,6 +84,23 @@ function headerFullMenuBtn() {
         $('.header__fullMenu .depth-1 > li.active').find('.depth-2').stop().slideUp();
         $('.header__fullMenu .depth-1 > li.active').removeClass('active');
     });
+
+     // 현재 width 값 변화 시 currentWidth에 저장
+    $(window).resize(function(){
+        currentWidth = $(this).width(); 
+    });
+
+    $('.header__fullMenu').click(function(){
+        if(currentWidth <= 1024) {
+            $('.header__fullMenu-btn').removeClass('active');
+            $('.header__fullMenu').removeClass('active');
+            $('html, body').removeClass('fixed');
+            $('.header__fullMenu .depth-1 > li.active').find('.depth-2').stop().slideUp();
+            $('.header__fullMenu .depth-1 > li.active').removeClass('active');
+        }
+    });
+    
+    
 }
 
 // width 1024이하 전체메뉴 아이템
