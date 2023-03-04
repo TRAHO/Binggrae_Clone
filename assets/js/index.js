@@ -1,10 +1,38 @@
 let depth02_height = [];
-let headerHeigth = $('.header').height();
+let headerTopHeight = $('.header__top').innerHeight();
+let headerMainHeight = $('.header__main').innerHeight();
+let headerHeight = headerTopHeight + headerMainHeight;
 let currentWidth = $(window).width();
 
+if($('.header__top').css('display') == 'none') {
+    headerHeight = headerMainHeight + 0;
+    $('.header').height(headerHeight);
+}
+else {
+    headerHeight = headerTopHeight + headerMainHeight;
+    $('.header').height(headerHeight);
+}
+
+console.log(headerHeight);
  // 현재 width 값 변화 시 currentWidth에 저장
 $(window).resize(function(){
     currentWidth = $(this).width();
+    headerTopHeight = $('.header__top').innerHeight();
+    headerMainHeight = $('.header__main').innerHeight();
+
+    $('.header__navWrap .depth-2').each(function(index){
+        depth02_height[index] = $(this).innerHeight();
+    });
+
+    if($('.header__top').css('display') == 'none') {
+        headerHeight = headerMainHeight + 0;
+        $('.header').height(headerHeight);
+    }
+    else {
+        headerHeight = headerTopHeight + headerMainHeight;
+        $('.header').height(headerHeight);
+    }
+    console.log(headerHeight);
 
     // width 1024이상 fullMenu depth-2 초기화
     if($('.header__fullMenu .depth-1 > li').hasClass('active') && currentWidth > 1024) {
@@ -35,12 +63,12 @@ function headerHover() {
 
     $('.header__navWrap').mouseenter(function(){
         $('.header').addClass('active');
-        $('.header').height(headerHeigth + Math.max(...depth02_height));
+        $('.header').height(headerHeight + Math.max(...depth02_height));
     });
 
     $('.header').mouseleave(function(){
         $('.header').removeClass('active');
-        $('.header').height(headerHeigth);
+        $('.header').height(headerHeight);
     });
 }
 
@@ -83,7 +111,7 @@ function headerFullMenuBtn() {
             $('html, body').addClass('fixed');
             $('.header__navWrap').hide();
             $('.header').removeClass('active');
-            $('.header').height(headerHeigth);
+            $('.header').height(headerHeight);
             $('.header__fullMenu').addClass('active');
         }
     });
