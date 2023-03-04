@@ -284,3 +284,9 @@
         color: #707070;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .header__main {
+        padding: 22px 20px;
+    }
+}

@@ -5,17 +5,6 @@ body.fixed {
     width: 100%;
 }
 
-html::-webkit-scrollbar {
-    width: 10px;
-}
-
-html::-webkit-scrollbar-thumb {
-    background: #e0462e;
-    border-radius: 30px;
-    height: 150px;
-}
-
-
 /* 헤더 영역 */
 .header {
     display: flex;
