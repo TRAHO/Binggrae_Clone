@@ -392,6 +392,9 @@ body.fixed {
 }
 
 .mainTop__searchInner .search_product_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 0;
     max-width: 180px;
     width: 22%;
@@ -403,4 +406,29 @@ body.fixed {
     box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
     background: linear-gradient(to top, #ed1c25, #e0462e);
     cursor: pointer;
+    letter-spacing: normal;
 }   
+
+/* 메인 상단 키워드 */
+.mainTop__keyword {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 7px;
+}
+
+.mainTop__keyword li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 120px;
+    height: 37px;
+    padding: 0 20px;
+    font-size: 12px;
+    font-family: Binggrae;
+    border-radius: 18.5px;
+    border: 1px solid #edecef;
+    cursor: pointer;
+    letter-spacing: normal;
+}
