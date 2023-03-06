@@ -19,7 +19,19 @@
 <body>
 
     <!-- mainTop start -->
-    
+    <section class="mainTop">
+        <div class="mainTop__logoWrap">
+            <img src="../assets/img/sec01_logo_4.png" alt="sec01_logo_4">
+            <img src="../assets/img/m_sec01_logo_4.png" alt="mo_sec01_logo_4" class="mo">
+        </div>
+        <div class="mainTop__searchBar">
+            <div class="mainTop__searchInner">
+                <input type="text" name="search_product" id="search_product" placeholder="검색어를 입력해주세요" onfocus="this.placeholder=''" onblur="this.placeholder='검색어를 입력해주세요'">
+                <button class="search_product_btn">SEARCH</button>
+            </div>
+        </div>
+        <ul class="mainTop__keyword"></ul>
+    </section>
 
     <!-- jquery -->
     <script src="http://code.jquery.com/jquery-latest.js"></script>
