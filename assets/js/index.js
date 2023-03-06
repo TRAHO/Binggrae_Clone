@@ -1,3 +1,4 @@
+// header
 let depth02_height = [];
 let headerTopHeight = $('.header__top').innerHeight();
 let headerMainHeight = $('.header__main').innerHeight();
