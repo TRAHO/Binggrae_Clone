@@ -5,7 +5,7 @@ let headerHeight = headerTopHeight + headerMainHeight;
 let currentWidth = $(window).width();
 
 if($('.header__top').css('display') == 'none') {
-    headerHeight = headerMainHeight + 0;
+    headerHeight = headerMainHeight;
     $('.header').height(headerHeight);
 }
 else {
@@ -13,8 +13,7 @@ else {
     $('.header').height(headerHeight);
 }
 
-console.log(headerHeight);
- // 현재 width 값 변화 시 currentWidth에 저장
+ // 창 크기 변화 시 실행
 $(window).resize(function(){
     currentWidth = $(this).width();
     headerTopHeight = $('.header__top').innerHeight();
@@ -32,7 +31,6 @@ $(window).resize(function(){
         headerHeight = headerTopHeight + headerMainHeight;
         $('.header').height(headerHeight);
     }
-    console.log(headerHeight);
 
     // width 1024이상 fullMenu depth-2 초기화
     if($('.header__fullMenu .depth-1 > li').hasClass('active') && currentWidth > 1024) {
