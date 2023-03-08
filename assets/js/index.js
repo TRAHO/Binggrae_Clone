@@ -170,8 +170,16 @@ function mobileFullMenuItem() {
     });
 }
 
+// 메인 슬라이더 01
+function mainSlide01() {
+    let swiper01 = new Swiper('.mainSlide__slide01', {
+        slidesPerView: 6,
+    });
+}
+
 headerHover();
 headerLangsBtn();
 headerFullMenuBtn();
 headerFixed();
 mobileFullMenuItem();
+mainSlide01();

@@ -433,3 +433,61 @@ body.fixed {
     cursor: pointer;
     letter-spacing: normal;
 }
+/* 메인 상단 영역 끝 */
+
+/* 메인 슬리이더 영역 */
+.mainSlide {
+    padding: 0 0 140px;
+}
+
+.mainSlide__slideContainer01 {
+    max-width: 1650px;
+    width: 100%;
+    margin: 0 auto 140px;
+}
+
+.mainSlide__title {
+    font-size: 38px;
+    font-family: Binggrae-bold;
+    text-align: center;
+    line-height: 1.45;
+    letter-spacing: -1.9px;
+}
+
+.mainSlide__slideContainer01 .mainSlide__title{
+    margin-bottom: 20px;
+}
+
+.mainSlide__slide01 {
+    overflow: hidden;
+    max-width: 1573px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 7px;
+}
+
+.mainSlide__slide01 .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    padding: 0 9px;
+    transition: transform 1s;
+}
+
+.mainSlide__slide01 .swiper-slide a {
+    cursor: pointer;
+}
+
+.mainSlide__slide01 .swiper-slide a:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 43px;
+    border-radius: 21px;
+    font-size: 16px;
+    margin-top: 16px;
+    background-color: #f9f9f9;
+}
+
+.mainSlide__slide01 .swiper-slide:hover {
+    transform: translateY(-10px);
+}
