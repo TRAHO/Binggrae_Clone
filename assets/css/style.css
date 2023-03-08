@@ -355,7 +355,7 @@ body.fixed {
 }
 
 /* 메인 상단 로고 */
-.mainTop__logoWrap img{
+.mainTop__logoWrap img {
     margin: 0 auto;
 }
 
@@ -407,6 +407,7 @@ body.fixed {
     background: linear-gradient(to top, #ed1c25, #e0462e);
     cursor: pointer;
     letter-spacing: normal;
+    transition: all 0.5s;
 }   
 
 /* 메인 상단 키워드 */

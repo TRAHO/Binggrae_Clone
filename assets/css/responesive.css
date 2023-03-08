@@ -81,6 +81,20 @@
     .header__fullMenu .depth-1 > li {
         padding: 30px 15px;
     }
+
+    /* 메인 상단 영역 */
+    .mainTop__logoWrap {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .mainTop__searchBar {
+        height: 60px;
+    }
+
+    .mainTop__searchInner .search_product_btn {
+        height: 45px;
+    }
 }
 
 /* width 1024px 이하  */
@@ -285,11 +299,50 @@
         font-weight: 500;
         color: #707070;
     }
+
+    /* 메인 상단 영역 */
+    .mainTop__logoWrap img {
+        width: auto;
+    }
+
+    .mainTop__searchBar {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px) {
     /* 헤더 메인 영역 */
     .header__main {
         padding: 22px 20px;
+    }
+
+    /* 메인 상단 영역 */
+    .mainTop__searchBar {
+        width: 90%;
+        height: 45px;
+        max-width: 500px;
+        margin-top: 25px;
+    }
+
+    .mainTop__searchInner {
+        padding: 0 6px 0 25px;
+    }
+
+    .mainTop__searchInner input {
+        background-size: 12px;
+        font-size: 14px;
+    }
+
+    .mainTop__searchInner .search_product_btn {
+        width: 30%;
+        height: 30px;
+        font-size: 10px;
+    }
+
+    .mainTop__keyword > li {
+        height: 30px;
+        padding: 0 10px;
+        min-width: auto;
+        font-size: 10px;
     }
 }
