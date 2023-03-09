@@ -172,8 +172,26 @@ function mobileFullMenuItem() {
 
 // 메인 슬라이더 01
 function mainSlide01() {
-    let swiper01 = new Swiper('.mainSlide__slide01', {
+    let swiper01 = new Swiper('.mainSlide__slide01 .swiper', {
         slidesPerView: 6,
+        spaceBetween: 18,
+        touchRatio: 0,//드래그 금지
+        navigation: {
+            prevEl: '.slide01__btn-prev',
+            nextEl: '.slide01__btn-next',
+        },
+    });
+}
+
+function mainSlide02() {
+    let swiper02 = new Swiper('.mainSlide__slide02 .swiper', {
+        slidesPerView: 6,
+        spaceBetween: 18,
+        touchRatio: 0,//드래그 금지
+        navigation: {
+            prevEl: '.slide01__btn-prev',
+            nextEl: '.slide01__btn-next',
+        },
     });
 }
 
@@ -183,3 +201,4 @@ headerFullMenuBtn();
 headerFixed();
 mobileFullMenuItem();
 mainSlide01();
+mainSlide02();

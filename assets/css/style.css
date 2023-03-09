@@ -440,10 +440,10 @@ body.fixed {
     padding: 0 0 140px;
 }
 
-.mainSlide__slideContainer01 {
+.mainSlide__slideContainer {
     max-width: 1650px;
     width: 100%;
-    margin: 0 auto 140px;
+    margin: 0 auto;
 }
 
 .mainSlide__title {
@@ -452,25 +452,50 @@ body.fixed {
     text-align: center;
     line-height: 1.45;
     letter-spacing: -1.9px;
-}
-
-.mainSlide__slideContainer01 .mainSlide__title{
     margin-bottom: 20px;
 }
 
-.mainSlide__slide01 {
+.mainSlide__slide01,
+.mainSlide__slide02 {
+    display: flex;
+    align-items: center;
+}
+
+.mainSlide .swiper {
     overflow: hidden;
     max-width: 1573px;
     width: 100%;
     margin: 0 auto;
-    padding: 20px 7px;
+    padding: 20px 15px;
+}
+
+.mainSlide .swiper .swiper-slide {
+    transition: transform 1s;
+}
+
+.mainSlide .swiper .swiper-slide:hover {
+    transform: translateY(-10px);
+}
+
+/* 메인 슬라이더 버튼 */
+.slide01__btn-prev,
+.slide01__btn-next {
+    cursor: pointer;
+}
+
+.swiper-button-disabled {
+    opacity: 0.1;
+}
+
+
+/* 메인 슬라이더 - 01 */
+.mainSlide__slideContainer--01 {
+    margin-bottom: 140px;
 }
 
 .mainSlide__slide01 .swiper-slide {
     display: flex;
     flex-direction: column;
-    padding: 0 9px;
-    transition: transform 1s;
 }
 
 .mainSlide__slide01 .swiper-slide a {
@@ -486,8 +511,106 @@ body.fixed {
     font-size: 16px;
     margin-top: 16px;
     background-color: #f9f9f9;
+    transition: none;
 }
 
-.mainSlide__slide01 .swiper-slide:hover {
-    transform: translateY(-10px);
+.mainSlide__slide01 .swiper-slide .hover-item {
+    display: none;
+    letter-spacing: normal;
+}
+
+/* 메인 슬라이더 - 01 아이템 호버 시 */
+.mainSlide__slide01 .swiper-slide:hover a:last-child {
+    box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
+    background: linear-gradient(to top, #ed1c25, #e0462e);
+    color: #fff;
+}
+
+.mainSlide__slide01 .swiper-slide:hover .hover-item {
+    display: block;
+}
+
+.mainSlide__slide01 .swiper-slide:hover span:not(.hover-item) {
+    display: none;
+}
+
+/* 메인 슬라이더 - 02 */
+.mainSlide__slide02 .swiper-slide {
+    height: 250px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mainSlide__slide02 .slide02__brand-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 30px;
+    border: solid 1px #edecef;
+    background-color: #fff;
+}
+
+.mainSlide__slide02 .slide02__hover-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    transition: all 0.7s;
+}
+
+.mainSlide__slide02 .slide02__hover-box img {
+    transform: scale(0.8);
+}
+
+.mainSlide__slide02 .slide02__hover-box span {
+    font-size: 16px;
+    line-height: 1.38;
+    color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
+
+.mainSlide__slide02 .slide02__hover-box span::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.2);
+    margin: 18px auto;
+}
+
+.mainSlide__slide02 .swiper-slide:hover {
+    box-shadow: 0 5px 24.3px 2.7px rgb(0 0 0 / 9%);
+}
+
+.mainSlide__slide02 .swiper-slide:hover .slide02__brand-box {
+    display: none;
+}
+
+.mainSlide__slide02 .swiper-slide:hover .slide02__hover-box {
+    transform: translateY(-20px);
+}
+
+.mainSlide__slide02 .slide02__btn-buy {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 43px;
+    border-radius: 21px;
+    box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
+    background: linear-gradient(to top, #ed1c25, #e0462e);
+    font-size: 14px;
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: none;
+}
+
+.mainSlide__slide02 .swiper-slide:hover .slide02__btn-buy {
+    display: flex;
 }

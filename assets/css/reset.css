@@ -44,12 +44,17 @@ img {
     display: block;
     max-width: 100%;
 }
+
+span {
+    color: inherit;
+    font-size: inherit;
+}
 /* normalize end */
 
 /* 임시 */
 body { 
     height: 3000px;
-    background-color: #f0eded;
+    background-color: #fff;
 }
 
 .mo {
