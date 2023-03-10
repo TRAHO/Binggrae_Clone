@@ -350,8 +350,7 @@ body.fixed {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 180px 0;
-    height: 910px; /*임시 */  
+    padding: 180px 0;  
 }
 
 /* 메인 상단 로고 */
@@ -558,7 +557,8 @@ body.fixed {
     align-items: center;
     justify-content: center;
     height: inherit;
-    transition: all 0.7s;
+    opacity: 0;
+    transition: all 0.7s cubic-bezier(.25,.76,.72,1);
 }
 
 .mainSlide__slide02 .slide02__hover-box img {
@@ -581,18 +581,6 @@ body.fixed {
     margin: 18px auto;
 }
 
-.mainSlide__slide02 .swiper-slide:hover {
-    box-shadow: 0 5px 24.3px 2.7px rgb(0 0 0 / 9%);
-}
-
-.mainSlide__slide02 .swiper-slide:hover .slide02__brand-box {
-    display: none;
-}
-
-.mainSlide__slide02 .swiper-slide:hover .slide02__hover-box {
-    transform: translateY(-20px);
-}
-
 .mainSlide__slide02 .slide02__btn-buy {
     display: none;
     justify-content: center;
@@ -609,6 +597,20 @@ body.fixed {
     left: 50%;
     transform: translateX(-50%);
     transition: none;
+}
+
+/* 메인 슬라이더 - 02 호버 시 */
+.mainSlide__slide02 .swiper-slide:hover {
+    box-shadow: 0 5px 24.3px 2.7px rgb(0 0 0 / 9%);
+}
+
+.mainSlide__slide02 .swiper-slide:hover .slide02__brand-box {
+    display: none;
+}
+
+.mainSlide__slide02 .swiper-slide:hover .slide02__hover-box {
+    opacity: 1;
+    transform: translateY(-30px);
 }
 
 .mainSlide__slide02 .swiper-slide:hover .slide02__btn-buy {
