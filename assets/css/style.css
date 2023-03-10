@@ -729,3 +729,26 @@ body.fixed {
 }
 
 /* QnA 질문 영역 */
+.mainSupport__qnaTitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 47px 0 27px;
+}
+
+.mainSupport__qnaTitle h4 {
+    font-size: 23px;
+    font-family: Binggrae-bold;
+}
+
+.mainSupport__btnQnA {
+    background: none;
+    color: #1f1f1f;
+    border: 1px solid rgba(224, 223, 226, 0.6);
+    transition: none;
+}
+
+.mainSupport__btnQnA:hover {
+    box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 3%);
+    background: linear-gradient(to top, #ed1c25, #e0462e);
+    color: #fff;
+}
