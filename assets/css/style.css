@@ -616,3 +616,116 @@ body.fixed {
 .mainSlide__slide02 .swiper-slide:hover .slide02__btn-buy {
     display: flex;
 }
+/* 메인 슬라이더 영역 끝 */
+
+/* 메인 고객지원 영역 */
+.mainSupport {
+    padding-bottom: 140px;
+}
+
+/* 메인 고객지원 QnA 영역 */
+.mainSupport__container {
+    margin: 0 auto;
+    max-width: 1310px;
+}
+
+.mainSupport__title {
+    font-size: 38px;
+    font-family: Binggrae-bold;
+    text-align: center;
+    line-height: 1.45;
+    letter-spacing: -1.9px;
+    margin-bottom: 40px;
+}
+
+.mainSupport__qnaWrap {
+    padding: 60px 45px;
+    margin-bottom: 132px;
+    box-shadow: 0px 5px 24.3px 2.7px rgb(0 0 0 / 9%);
+    border-radius: 30px;
+    background-color: #fff;
+}
+
+.mainSupport__consult {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.mainSupport__consult > div {
+    width: 48.5%;
+    height: 325px;
+    border-radius: 30px;
+    padding: 55px 45px;
+}
+
+.mainSupport__consult > div > h4 {
+    font-size: 32px;
+    font-family: Binggrae-bold;
+    padding-bottom: 30px;
+}
+
+.mainSupport__consult > div > p {
+    font-size: 16px;
+}
+
+.btn-SupportDetail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 43px;
+    border-radius: 21.5px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: normal;
+    cursor: pointer;
+    box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 3%);
+    background: linear-gradient(to top, #ed1c25, #e0462e);
+}
+
+/* QnA email 영역 */
+.mainSupport__emailBox {
+    background-color: #eef8fa;
+    background-image: url(../img/sec04_backimg01.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+    position: relative;
+}
+
+.mainSupport__btnEmail {
+    position: absolute;
+    bottom: 50px;
+    left: 45px;
+}
+
+/* QnA phone 영역 */
+.mainSupport__phoneBox {
+    background-color: #fdf3f2;
+    background-image: url(../img/sec04_backimg02.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+}
+
+.mainSupport__phoneBox .phoneNumber {
+    font-size: 46.5px;
+    font-weight: 600;
+    font-family: Poppins;
+    color: #303030;
+}
+
+.mainSupport__phoneBox p:not(.phoneNumber) {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+    padding-top: 25px;
+}
+
+.mainSupport__phoneBox p:not(.phoneNumber) > span {
+    color: #e0462e;
+}
+
+/* QnA 질문 영역 */
