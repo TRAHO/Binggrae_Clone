@@ -752,3 +752,57 @@ body.fixed {
     background: linear-gradient(to top, #ed1c25, #e0462e);
     color: #fff;
 }
+
+/* QnA 질문 리스트 영역 */
+.mainSupport__qnaList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 0;
+}
+
+.mainSupport__qnaList > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 48%;
+    height: 80px;
+    border-radius: 30px;
+    padding: 0 20px;
+    box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 8%);
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.mainSupport__qnaList > li > p > i {
+    font-size: 18px;
+    font-family: Binggrae;
+    padding: 0 2px 0 0;
+    letter-spacing: normal;
+    line-height: 1.4;
+}
+
+.mainSupport__qnaList > li > p > span {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.mainSupport__qnaList > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47px;
+    height: 47px;
+    border-radius: 23px;
+    box-shadow: inset 0px 5px 10px 0 rgb(26 26 26 / 14%);
+    background-color: #e0462e;
+    transform: scale(0);
+}
+
+/* QnA 질문 리스트 호버 시 */
+.mainSupport__qnaList > li:hover > p {
+    font-weight: bold;
+}
+.mainSupport__qnaList > li:hover > a {
+    transform: scale(1);
+}
