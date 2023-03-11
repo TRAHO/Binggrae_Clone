@@ -836,3 +836,115 @@ body.fixed {
     left: 50%;
     transform: translateX(-50%);
 }
+/* 메인 고객지원 영역 끝 */
+
+/* 푸터 영역 */
+.footer {
+    padding: 40px 50px 30px;
+    background-color: #1b1b1b;
+}
+
+.footer > section {
+    margin: 0 auto;
+    max-width: 1920px;
+}
+
+/* 푸터 상단 영역 */
+.footer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__topMenu {
+    display: flex;
+    gap: 0 30px;
+}
+
+.footer__topMenu a {
+    font-size: 14px;
+    color: #ffffff4d;
+}
+
+/* 푸터 중단 영역 */
+.footer__middle {
+    display: flex;
+    padding: 30px 0 115px;
+}
+
+.footer__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+    font-size: 17px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* 푸터 하단 영역 */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.footer__linkWrap {
+    display: flex;
+    align-items: center;
+    gap: 0 60px;
+}
+
+.footer__social {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+}
+
+.footer__social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px 1px rgb(0 0 0 / 36%), inset 0px 4px 10.8px 2.2px rgb(73 73 73 / 11%);
+    background-color: #1b1b1b;
+}
+
+.footer__flagship {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 355px;
+    height: 70px;
+    padding-left: 20px;
+    border-radius: 35px;
+    box-shadow: 0px 4px 8px 1px rgb(0 0 0 / 36%), inset 0px 4px 10.8px 2.2px rgb(73 73 73 / 11%);
+    background-color: #1b1b1b;
+    position: relative;
+}
+
+.footer__flagship p {
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    font-size: 14px;
+    color: #999999ab;
+}
+
+.footer__flagship strong {
+    font-size: 14px;
+    color: #ffffffab;
+}
+
+.footer__flagship > img {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+}
