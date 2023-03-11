@@ -623,7 +623,6 @@ body.fixed {
     padding-bottom: 140px;
 }
 
-/* 메인 고객지원 QnA 영역 */
 .mainSupport__container {
     margin: 0 auto;
     max-width: 1310px;
@@ -638,6 +637,7 @@ body.fixed {
     margin-bottom: 40px;
 }
 
+/* 메인 고객지원 QnA 영역 */
 .mainSupport__qnaWrap {
     padding: 60px 45px;
     margin-bottom: 132px;
@@ -805,4 +805,34 @@ body.fixed {
 }
 .mainSupport__qnaList > li:hover > a {
     transform: scale(1);
+}
+
+/* 메인 고객지원 제보 영역 */
+.mainSupport__reportWrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainSupport__reportWrap > section {
+    padding: 78px 25px 58px;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 8%);
+    width: 48.5%;
+    height: 230px;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+
+.mainSupport__reportWrap > section > p {
+    font-size: 20px;
+    line-height: 1.63;
+}
+
+.mainSupport__reportWrap > section > .btn-SupportDetail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
