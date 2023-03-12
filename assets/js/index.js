@@ -173,17 +173,18 @@ function mobileFullMenuItem() {
 // 메인 슬라이더 01
 function mainSlide01() {
     let swiper01 = new Swiper('.mainSlide__slide01 .swiper', {
+
         slidesPerView: 3,
         slidesPerGroup : 3,
         spaceBetween: 0,
-        touchRatio: 1,//드래그 금지
+        touchRatio: 1,//드래그 허용
         navigation: {
-            prevEl: '.slide01__btn-prev',
-            nextEl: '.slide01__btn-next',
+            prevEl: '.mainSlide__slide01 .slide__btn-prev',
+            nextEl: '.mainSlide__slide01 .slide__btn-next',
         },
 
         pagination: {
-            el: '.slide01__pagination',
+            el: '.slideMobile__pagination--01',
             type: 'bullets',
             clickable: true,
         },
@@ -220,24 +221,46 @@ function mainSlide01() {
 // 메인 슬라이더 02
 function mainSlide02() {
     let swiper02 = new Swiper('.mainSlide__slide02 .swiper', {
-        slidesPerView: 6,
-        spaceBetween: 18,
-        touchRatio: 0,//드래그 금지
+
+        slidesPerView: 3,
+        slidesPerGroup : 3,
+        spaceBetween: 0,
+        touchRatio: 1,//드래그 허용
         navigation: {
-            prevEl: '.slide01__btn-prev',
-            nextEl: '.slide01__btn-next',
+            prevEl: '.mainSlide__slide02 .slide__btn-prev',
+            nextEl: '.mainSlide__slide02 .slide__btn-next',
+        },
+
+        pagination: {
+            el: '.slideMobile__pagination--02',
+            type: 'bullets',
+            clickable: true,
         },
 
         // Responsive
         breakpoints: {
-            // width >= 1200px
-            1200: {
-                slidesPerView: 5,
+            //width >= 769px
+            769: {
+                slidesPerView: 4,
+                slidesPerGroup : 1,
+                spaceBetween: 18,
+                touchRatio: 0,
             },
 
-            // width >= 1400px
-            1400: {
+            // width >= 1201px
+            1201: {
+                slidesPerView: 5,
+                slidesPerGroup : 1,
+                spaceBetween: 18,
+                touchRatio: 0,
+            },
+
+            // width >= 1401px
+            1401: {
                 slidesPerView: 6,
+                slidesPerGroup : 1,
+                spaceBetween: 18,
+                touchRatio: 0,
             }
         },
     });

@@ -444,6 +444,7 @@ body.fixed {
     width: 100%;
     margin: 0 auto;
     transition: width 0.5s;
+    position: relative;
 }
 
 .mainSlide__title {
@@ -486,6 +487,9 @@ body.fixed {
 }
 
 .mainSlide__mo .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
     gap: 15px 0;
 }
 
@@ -494,17 +498,18 @@ body.fixed {
     flex-direction: column;
     gap: 12px 0;
     margin: 0 4px;
+    cursor: pointer;
 }
 
 /* 슬라이더 모바일 pagination */
-.mainSlide__mo .slide01__pagination {
+.mainSlide__mo .slideMobile__pagination {
     display: flex;
     justify-content: center;
     position: static;
     margin-top: 25px;
 }
 
-.mainSlide__mo .slide01__pagination span {
+.mainSlide__mo .slideMobile__pagination span {
     width: 6px;
     height: 6px;
     border-radius: 50%;
@@ -512,18 +517,19 @@ body.fixed {
     margin: 0 !important;
 }
 
-.mainSlide__mo .slide01__pagination span+span {
+.mainSlide__mo .slideMobile__pagination span+span {
     margin: 0 0 0 16px !important;
 }
 
 /* 메인 슬라이더 버튼 */
-.slide01__btn-prev,
-.slide01__btn-next {
+.slide__btn-prev,
+.slide__btn-next {
     cursor: pointer;
     transform: translateY(-10px);
 }
 
-.swiper-button-disabled {
+.slide__btn-prev.swiper-button-disabled,
+.slide__btn-next.swiper-button-disabled {
     opacity: 0.1;
 }
 
@@ -588,6 +594,10 @@ body.fixed {
     background-color: #fff;
 }
 
+.slide02__brand-box .slide02__mobileLogo {
+    width: 100%;
+}
+
 .mainSlide__slide02 .slide02__hover-box {
     display: flex;
     flex-direction: column;
@@ -634,24 +644,6 @@ body.fixed {
     left: 50%;
     transform: translateX(-50%);
     transition: none;
-}
-
-/* 메인 슬라이더 - 02 호버 시 */
-.mainSlide__slide02 .swiper-slide:hover {
-    box-shadow: 0 5px 24.3px 2.7px rgb(0 0 0 / 9%);
-}
-
-.mainSlide__slide02 .swiper-slide:hover .slide02__brand-box {
-    display: none;
-}
-
-.mainSlide__slide02 .swiper-slide:hover .slide02__hover-box {
-    opacity: 1;
-    transform: translateY(-30px);
-}
-
-.mainSlide__slide02 .swiper-slide:hover .slide02__btn-buy {
-    display: flex;
 }
 /* 메인 슬라이더 영역 끝 */
 
