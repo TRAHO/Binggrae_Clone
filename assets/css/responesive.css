@@ -22,6 +22,24 @@
     }
 }
 
+/* width 1400px 이상 */
+@media screen and (min-width: 1400px) {
+    /* 메인 슬라이더 - 01 아이템 호버 시 */
+    .mainSlide__slide01.pc .swiper-slide:hover a:last-child {
+        box-shadow: inset 0px 5px 10px 0 rgb(53 53 53 / 11%);
+        background: linear-gradient(to top, #ed1c25, #e0462e);
+        color: #fff;
+    }
+
+    .mainSlide__slide01.pc .swiper-slide:hover .hover-item {
+        display: block;
+    }
+
+    .mainSlide__slide01.pc .swiper-slide:hover span:not(.hover-item) {
+        display: none;
+    }
+}
+
 /* width 1700px 이하 */
 @media screen and (max-width: 1700px) {
     /* 헤더 영역 */
@@ -72,6 +90,11 @@
 
     .header__fullMenu .depth-3 > li > a {
         font-size: 12px;
+    }
+
+    /* 메인 슬라이더 영역 */
+    .mainSlide__slideContainer {
+        width: 95%;
     }
 }
 
@@ -344,5 +367,18 @@
         padding: 0 10px;
         min-width: auto;
         font-size: 10px;
+    }
+
+    /* 메인 슬라이더 - 01 */
+    .mainSlide__title {
+        font-size: 22px;
+    }
+
+    .mainSlide__slide01--pc {
+        display: none;
+    }
+
+    .mainSlide__slide01--mo {
+        display: flex;
     }
 }

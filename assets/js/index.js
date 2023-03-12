@@ -173,16 +173,40 @@ function mobileFullMenuItem() {
 // 메인 슬라이더 01
 function mainSlide01() {
     let swiper01 = new Swiper('.mainSlide__slide01 .swiper', {
-        slidesPerView: 6,
+        slidesPerView: 3,
         spaceBetween: 18,
         touchRatio: 0,//드래그 금지
         navigation: {
             prevEl: '.slide01__btn-prev',
             nextEl: '.slide01__btn-next',
         },
+
+        pagination: {
+            el: '.slide01__pagination',
+            type: 'bullets',
+        },
+
+        // Responsive
+        breakpoints: {
+            //width >= 768px
+            768: {
+                slidesPerView: 6,
+            },
+
+            // width >= 1200px
+            1200: {
+                slidesPerView: 5,
+            },
+
+            // width >= 1400px
+            1400: {
+                slidesPerView: 6,
+            }
+        },
     });
 }
 
+// 메인 슬라이더 02
 function mainSlide02() {
     let swiper02 = new Swiper('.mainSlide__slide02 .swiper', {
         slidesPerView: 6,
@@ -191,6 +215,19 @@ function mainSlide02() {
         navigation: {
             prevEl: '.slide01__btn-prev',
             nextEl: '.slide01__btn-next',
+        },
+
+        // Responsive
+        breakpoints: {
+            // width >= 1200px
+            1200: {
+                slidesPerView: 5,
+            },
+
+            // width >= 1400px
+            1400: {
+                slidesPerView: 6,
+            }
         },
     });
 }
