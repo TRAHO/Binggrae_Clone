@@ -174,8 +174,9 @@ function mobileFullMenuItem() {
 function mainSlide01() {
     let swiper01 = new Swiper('.mainSlide__slide01 .swiper', {
         slidesPerView: 3,
-        spaceBetween: 18,
-        touchRatio: 0,//드래그 금지
+        slidesPerGroup : 3,
+        spaceBetween: 0,
+        touchRatio: 1,//드래그 금지
         navigation: {
             prevEl: '.slide01__btn-prev',
             nextEl: '.slide01__btn-next',
@@ -184,23 +185,33 @@ function mainSlide01() {
         pagination: {
             el: '.slide01__pagination',
             type: 'bullets',
+            clickable: true,
         },
 
         // Responsive
         breakpoints: {
-            //width >= 768px
-            768: {
+            //width >= 769px
+            769: {
                 slidesPerView: 6,
+                slidesPerGroup : 1,
+                spaceBetween: 18,
+                touchRatio: 0,
             },
 
-            // width >= 1200px
-            1200: {
+            // width >= 1201px
+            1201: {
                 slidesPerView: 5,
+                slidesPerGroup : 1,
+                spaceBetween: 18,
+                touchRatio: 0,
             },
 
-            // width >= 1400px
-            1400: {
+            // width >= 1401px
+            1401: {
                 slidesPerView: 6,
+                slidesPerGroup : 1,
+                spaceBetween: 18,
+                touchRatio: 0,
             }
         },
     });

@@ -7,6 +7,14 @@
     }
 }
 
+/* width 768px 이상 */
+@media screen and (min-width: 768px) {
+    /* 메인 슬라이드 영역 아이템 호버 시 */
+    .mainSlide .swiper .swiper-slide:hover {
+        transform: translateY(-10px);
+    }
+}
+
 /* width 1024px 이상 */
 @media  screen and (min-width: 1024px) {
     /* 전체 메뉴 영역 */
@@ -369,16 +377,16 @@
         font-size: 10px;
     }
 
-    /* 메인 슬라이더 - 01 */
+    /* 메인 슬라이더 */
     .mainSlide__title {
         font-size: 22px;
     }
 
-    .mainSlide__slide01--pc {
+    .mainSlide__pc {
         display: none;
     }
 
-    .mainSlide__slide01--mo {
+    .mainSlide__mo {
         display: flex;
     }
 }

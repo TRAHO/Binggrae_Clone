@@ -474,8 +474,46 @@ body.fixed {
     transition: transform 1s;
 }
 
-.mainSlide .swiper .swiper-slide:hover {
-    transform: translateY(-10px);
+/* 메인 슬라이더 영역 모바일 */
+.mainSlide__mo {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainSlide__mo .swiper {
+    padding: 0;
+}
+
+.mainSlide__mo .swiper-slide {
+    gap: 15px 0;
+}
+
+.mainSlide__mo ul > li > .mobile-itemWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px 0;
+    margin: 0 4px;
+}
+
+/* 슬라이더 모바일 pagination */
+.mainSlide__mo .slide01__pagination {
+    display: flex;
+    justify-content: center;
+    position: static;
+    margin-top: 25px;
+}
+
+.mainSlide__mo .slide01__pagination span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    margin: 0 !important;
+}
+
+.mainSlide__mo .slide01__pagination span+span {
+    margin: 0 0 0 16px !important;
 }
 
 /* 메인 슬라이더 버튼 */
@@ -521,8 +559,15 @@ body.fixed {
 }
 
 /* 메인 슬라이더 - 01 모바일 */
-.mainSlide__slide01--mo {
-    display: none;
+.mainSlide__slide01.mainSlide__mo .mobile-itemWrap > a:last-child {
+    margin-top: 0;
+    background: none;
+    height: auto;
+    font-weight: 500;
+}
+
+.mainSlide__slide01.mainSlide__mo .mobile-itemWrap > a:last-child > span {
+    line-height: normal;
 }
 
 /* 메인 슬라이더 - 02 */
