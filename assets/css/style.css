@@ -707,9 +707,13 @@ body.fixed {
     border-radius: 21.5px;
     font-size: 14px;
     font-weight: 500;
-    color: #fff;
     letter-spacing: normal;
     cursor: pointer;
+    border: 1px solid rgba(224, 223, 226, 0.6);
+}
+
+.btn-SupportDetail-red {
+    color: #fff;
     box-shadow: inset 0px 5px 10px 0 rgb(121 121 121 / 3%);
     background: linear-gradient(to top, #ed1c25, #e0462e);
 }
@@ -722,6 +726,7 @@ body.fixed {
     background-position: center right;
     background-size: cover;
     position: relative;
+    cursor: pointer;
 }
 
 .mainSupport__btnEmail {
@@ -770,9 +775,7 @@ body.fixed {
 }
 
 .mainSupport__btnQnA {
-    background: none;
     color: #1f1f1f;
-    border: 1px solid rgba(224, 223, 226, 0.6);
     transition: none;
 }
 

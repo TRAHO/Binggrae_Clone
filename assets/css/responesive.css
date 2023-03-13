@@ -140,6 +140,36 @@
     .mainSlide__slide02 .slide02__btn-buy {
         height: 30px;
     }
+
+    /* 메인 고객지원 영역 */
+    .mainSupport__container {
+        width: 95%;
+    }
+
+    .mainSupport__emailBox,
+    .mainSupport__phoneBox {
+        background-position: center right 30%;
+    }
+
+    /* QnA 질문 리스트 영역 */
+    .mainSupport__qnaList > li > p > i,
+    .mainSupport__qnaList > li > p > span {
+        font-size: 16px;
+    }
+
+    .mainSupport__qnaList > li {
+        height: 65px;
+    }
+
+    .mainSupport__qnaList > li > a {
+        width: 35px;
+        height: 35px;
+    }
+
+    /* 메인 고객지원 제보 영역 */
+    .mainSupport__reportWrap > section > p {
+        font-size: 16px;
+    }
 }
 
 /* width 1280px 이하 */
@@ -161,6 +191,11 @@
 
     .mainTop__searchInner .search_product_btn {
         height: 45px;
+    }
+
+    /* 고객지원 QnA 리스트 영역 */
+    .mainSupport__qnaList > li {
+        width: 100%;
     }
 }
 
@@ -375,6 +410,48 @@
     .mainTop__searchBar {
         width: 80%;
     }
+
+    /* 메인 고객지원 영역 */
+    .mainSupport__consult > div {
+        height: 260px;
+        padding: 30px;
+    }
+
+    .mainSupport__consult > div > h4 {
+        font-size: 28px;
+        padding-bottom: 20px;
+    }
+
+    .mainSupport__consult > div > p {
+        font-size: 14px;
+        line-height: normal;
+    }
+    
+    .mainSupport__btnEmail {
+        bottom: 30px;
+        left: 30px;
+    }
+
+    .mainSupport__phoneBox .phoneNumber {
+        font-size: 38.5px;
+        line-height: 1;
+    }
+
+    .mainSupport__phoneBox p:not(.phoneNumber) {
+        font-size: 16px;
+        padding-top: 15px;
+        line-height: 1;
+    }
+
+    /* QnA 질문 타이틀 */
+    .mainSupport__qnaTitle h4 {
+        font-size: 20px;
+    }
+
+    /* 메인 고객지원 제보 영역 */
+    .mainSupport__reportWrap > section > .btn-SupportDetail {
+        bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -417,11 +494,12 @@
     .mainSlide__slideContainer {
         width: 100%;
     }
-    .mainSlide__slideContainer:first-child {
+    .mainSlide__slideContainer--01 {
         padding: 0 20px 50px;
+        margin-bottom: auto;
     }
 
-    .mainSlide__slideContainer:last-child {
+    .mainSlide__slideContainer--02 {
         padding: 50px 20px;
     }
 
@@ -447,5 +525,125 @@
 
     .mainSlide__mo {
         display: flex;
+    }
+
+    /* 메인 고객지원 영역 */
+    .mainSupport__btnQnA {
+        font-size: 12px;
+        width: 115px;
+        height: 30px;
+    }
+
+    .mainSupport {
+        padding: 50px 20px 85px;
+    }
+
+    .mainSupport__container {
+        margin: 30px auto 0;
+    }
+
+    .mainSupport__title {
+        font-size: 22px;
+        margin-bottom: 40px;
+    }
+
+    .mainSupport__qnaWrap {
+        padding: 31px 14px;
+        border: 1px solid rgba(224, 223, 226, 0.6);
+    }
+
+    .mainSupport__consult {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px 0;
+    }
+
+    .mainSupport__consult > div {
+        text-align: left;
+        width: 100%;
+        height: 125px;
+        border-radius: 15px;
+        padding: 29px 23px;
+    }
+
+    .mainSupport__consult > div > h4 {
+        font-size: 18px;
+        padding-bottom: 14px;
+        line-height: 1;
+    }
+
+    .mainSupport__consult > div > p {
+        line-height: 1.63;
+    }
+
+    .mainSupport__emailBox {
+        background-image: url(../img/m_sec04_backimg01.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .mainSupport__btnEmail {
+        display: none;
+    }
+
+    .mainSupport__phoneBox {
+        background-image: url(../img/m_sec04_backimg02.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .mainSupport__phoneBox .phoneNumber {
+        font-size: 18px;
+        line-height: auto;
+    }
+
+    .mainSupport__phoneBox p:not(.phoneNumber) {
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    /* QnA 질문 영역 타이틀 */
+    .mainSupport__qnaTitle h4 {
+        font-size: 18px;
+    }
+
+    /* QnA 질문 리스트 영역 */
+    .mainSupport__qnaList > li {
+        height: 47px;
+        border-radius: 15px;
+        padding: 0 19px 0 17px;
+    }
+
+    .mainSupport__qnaList > li > p > i,
+    .mainSupport__qnaList > li > p > span {
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .mainSupport__qnaList > li > a {
+        width: 12px;
+        height: auto;
+        background: none;
+        box-shadow: none;
+        transform: scale(1);
+    }
+
+    /* 메인 고객지원 제보 영역 */
+    .mainSupport__reportWrap {
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 10px 0;
+    }
+
+    .mainSupport__reportWrap > section {
+        width: 100%;
+    }
+
+    .mainSupport__reportWrap > section > .btn-SupportDetail {
+        font-size: 12px;
     }
 }
