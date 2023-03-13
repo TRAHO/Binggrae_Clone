@@ -461,6 +461,11 @@
     }
 
     /* 메인 상단 영역 */
+    .mainTop {
+        padding: 130px 0 60px;
+        background-image: url(../img/mo_section01_1.png);
+    }
+
     .mainTop__searchBar {
         width: 90%;
         height: 45px;
@@ -491,6 +496,10 @@
     }
 
     /* 메인 슬라이더 영역 */
+    .mainSlide {
+        padding: 0;
+    }
+
     .mainSlide__slideContainer {
         width: 100%;
     }
@@ -581,6 +590,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+    }
+
+    .mainSupport__emailBox > p > span {
+        display: none;
     }
 
     .mainSupport__btnEmail {
