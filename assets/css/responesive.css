@@ -69,6 +69,14 @@
     
 }
 
+/* width 1780px 이하 */
+@media screen and (max-width:1780px) { 
+    /* 메인 슬라이더 영역 */
+    .mainSlide__slideContainer {
+        width: 95%;
+    }
+}
+
 /* width 1700px 이하 */
 @media screen and (max-width: 1700px) {
     /* 헤더 영역 */
@@ -119,11 +127,6 @@
 
     .header__fullMenu .depth-3 > li > a {
         font-size: 12px;
-    }
-
-    /* 메인 슬라이더 영역 */
-    .mainSlide__slideContainer {
-        width: 95%;
     }
 }
 
