@@ -432,7 +432,7 @@ body.fixed {
 }
 
 .side__btn--toUpdown > .toUp {
-    /* display: none; */
+    display: none;
 }
 
 /* 메인 상단 영역 */

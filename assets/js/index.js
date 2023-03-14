@@ -16,6 +16,19 @@ else {
 
 // aside
 function asideBtn() {
+    $(window).on("scroll", function(){
+        let scrollTop = $(this).scrollTop();
+        
+        if(scrollTop >= 600) {
+            $('.btn.toDown').hide();
+            $('.btn.toUp').css('display', 'flex');
+        }
+        else {
+            $('.btn.toUp').css('display', '');
+            $('.btn.toDown').css('display', '');
+        }
+    });
+
     $('.btn.toUp').click(function(){
         $('html,body').animate({scrollTop: 0}, 1000);
     });
