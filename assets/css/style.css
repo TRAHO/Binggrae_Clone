@@ -922,6 +922,7 @@ body.fixed {
 
 .footer__copyright {
     font-size: 14px;
+    letter-spacing: -0.15px;
     color: rgba(255, 255, 255, 0.2);
 }
 
@@ -979,4 +980,43 @@ body.fixed {
     right: 30px;
     top: 50%;
     transform: translateY(-50%) rotate(-90deg);
+}
+
+/* 푸터 모바일 하단 영역 */
+.footer__mobileBottom {
+    display: none;
+    justify-content: space-between;
+    padding-top: 80px;
+}
+
+.footer__bottomMenu {
+    display: flex;
+    gap: 0 25px;
+}
+
+.footer__bottomMenu > li > a {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer__bottomMenu > li+li {
+    position: relative;
+}
+
+.footer__bottomMenu > li+li::before {
+    content: "";
+    width: 1px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 52%;
+    left: -12.5px;
+    transform: translateY(-50%);
+}
+
+.footer__mobileCopyright {
+    font-size: 12px;
+    letter-spacing: -0.21px;
+    color: rgba(255, 255, 255, 0.2);
 }
