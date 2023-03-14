@@ -14,6 +14,17 @@ else {
     $('.header').height(headerHeight);
 }
 
+// aside
+function asideBtn() {
+    $('.btn.toUp').click(function(){
+        $('html,body').animate({scrollTop: 0}, 1000);
+    });
+
+    $('.btn.toDown').click(function(){
+        $('html,body').animate({scrollTop: ($('html').height())-($(window).height())}, 1000);
+    });
+}
+
  // 창 크기 변화 시 실행
 $(window).resize(function(){
     currentWidth = $(this).width();
@@ -273,3 +284,4 @@ headerFixed();
 mobileFullMenuItem();
 mainSlide01();
 mainSlide02();
+asideBtn();
